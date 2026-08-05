@@ -228,7 +228,7 @@ filter_predictions <- pred_dt[intersection %in% grp_count[N >= 10, intersection]
 nrow(filter_predictions) # Check how many strata remain - n = 1136 (95.46%)
 grp_count <- grp_count[grp_count$N >= 10] # Save list of intersectional strata included in the plot
 fwrite(grp_count, "./Outputs/Tables/intersectional_group_frequencies_cmd_post.csv") # Save to share in SDC process
-fwrite(filter_predictions, "./Outputs/Tables/intersectional_group_pred_prob_cmd_pre.csv") # Save to share in SDC process
+fwrite(filter_predictions, "./Outputs/Tables/intersectional_group_pred_prob_cmd_post.csv") # Save to share in SDC process
 rm(grp_count, pred_dt, pred) # Tidy
 
 # Recreate in ggplot2 - females
