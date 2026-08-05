@@ -204,7 +204,7 @@ write.csv(ethnicity2, "./Data/ethnicity2.csv")
 cmd_tab <- DBI::dbGetQuery(con, 
   "SELECT DISTINCT * 
   FROM [Client_SystemP_RW].[XH_GW_GP_events_depression_anxiety_all_dev]
-  WHERE EventDate BETWEEN '2022-06-04' AND '2026-03-03'
+  WHERE EventDate BETWEEN '2022-06-04' AND '2025-05-31'
   ")
 
 # Create outcome measures
@@ -231,7 +231,7 @@ test <- DBI::dbGetQuery(con, "SELECT Top 10 * FROM [Client_SystemP_RW].[XH_GW_GP
 cmd_tab <- DBI::dbGetQuery(con, 
   "SELECT DISTINCT * 
   FROM [Client_SystemP_RW].[XH_GW_GP_medications_depression_anxiety_all_dev]
-  WHERE MedicationDate BETWEEN '2022-06-04' AND '2026-03-03'
+  WHERE MedicationDate BETWEEN '2022-06-04' AND '2025-05-31'
   ")
 
 # Create outcome measures
